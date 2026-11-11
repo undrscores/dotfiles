@@ -1,0 +1,22 @@
+# Allowlist: ignore everything in ~/.config except what is listed here.
+/*
+!/.gitignore
+!/README.md
+!/foot/
+!/uwc/
+!/gtk-3.0/
+!/gtk-4.0/
+!/qt5ct/
+!/qt6ct/
+!/fastfetch/
+!/btop/
+!/fontconfig/
+!/ushell/
+!/zsh/
+!/mimeapps.list
+# quickshell/ushell is its own repo: https://github.com/undrscores/ushell
+*.bak*
+.zcompdump*
+# machine-specific (absolute paths); see README
+/qt5ct/*.conf
+/qt6ct/*.conf

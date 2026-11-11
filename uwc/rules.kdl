@@ -1,0 +1,12 @@
+// Translucent terminal so the blur shows through
+rule {
+    match app-id="foot"
+    opacity 0.75
+    blur-radius 14
+}
+rule {
+    match app-id="mpv"
+    open { pinned; size 640 360; position 20 20; focus false }
+    corner-radius 0
+    shadow-size 0
+}

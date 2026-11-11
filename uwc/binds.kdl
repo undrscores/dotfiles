@@ -1,0 +1,146 @@
+binds {
+    // apps
+    Mod+Return { spawn "foot"; }
+    Mod+T { spawn "foot"; }
+    Mod+D { spawn "qs" "-c" "ushell" "ipc" "call" "shell" "toggle" "launcher"; }
+    Mod+V { spawn "qs" "-c" "ushell" "ipc" "call" "shell" "toggle" "clipboard"; }
+    Mod+Period { spawn "qs" "-c" "ushell" "ipc" "call" "shell" "toggle" "widgets"; }
+    Mod+Comma { spawn "qs" "-c" "ushell" "ipc" "call" "shell" "toggle" "notifications"; }
+    Mod+Shift+P { spawn "qs" "-c" "ushell" "ipc" "call" "shell" "toggle" "power"; }
+    Mod+Shift+W { spawn "qs" "-c" "ushell" "ipc" "call" "shell" "toggle" "wallpapers"; }
+    Mod+Alt+Tab { spawn "qs" "-c" "ushell" "ipc" "call" "switcher" "toggle"; }
+    Mod+Ctrl+Q { spawn "qs" "-c" "ushell" "ipc" "call" "lock" "lock"; }
+    Mod+Shift+S { spawn "qs" "-c" "ushell" "ipc" "call" "capture" "region"; }
+    Print { spawn "qs" "-c" "ushell" "ipc" "call" "capture" "screen"; }
+
+    // media / hardware keys
+    XF86AudioRaiseVolume { spawn "wpctl" "set-volume" "-l" "1.0" "@DEFAULT_AUDIO_SINK@" "5%+"; }
+    XF86AudioLowerVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-"; }
+    XF86AudioMute { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+    XF86AudioPlay { spawn "playerctl" "play-pause"; }
+    XF86AudioNext { spawn "playerctl" "next"; }
+    XF86AudioPrev { spawn "playerctl" "previous"; }
+    XF86MonBrightnessUp { spawn "qs" "-c" "ushell" "ipc" "call" "shell" "brightness" "+5"; }
+    XF86MonBrightnessDown { spawn "qs" "-c" "ushell" "ipc" "call" "shell" "brightness" "-5"; }
+
+    // windows
+    Mod+Q { close-window; }
+    Mod+Shift+Q { quit; }
+    Ctrl+Alt+BackSpace { quit; }
+    Mod+H { focus-direction "left"; }
+    Mod+L { focus-direction "right"; }
+    Mod+K { focus-direction "up"; }
+    Mod+J { focus-direction "down"; }
+    Mod+Shift+H { move-window "left"; }
+    Mod+Shift+L { move-window "right"; }
+    Mod+Shift+K { move-window "up"; }
+    Mod+Shift+J { move-window "down"; }
+    Mod+Ctrl+H { resize-window "left"; }
+    Mod+Ctrl+L { resize-window "right"; }
+    Mod+Ctrl+K { resize-window "up"; }
+    Mod+Ctrl+J { resize-window "down"; }
+    Mod+N { focus-next-window; }
+    Mod+Shift+N { focus-previous-window; }
+    Mod+C { center-window; }
+    Mod+M { fit-window; }
+    Mod+E { toggle-fullscreen; }
+    Mod+Y { minimize-window; }
+    Mod+Shift+Y { restore-window; }
+    Mod+Shift+Space { toggle-pin; }
+    Mod+Space { next-layout; }
+
+    // canvas
+    Mod+O { toggle-overview; }
+    Mod+Slash { jump-hints; }
+    Mod+minus { zoom 0.8; }
+    Mod+equal { zoom 1.25; }
+    Mod+Shift+0 { zoom-reset; }
+    Mod+Ctrl+minus { scale-window 0.8; }
+    Mod+Ctrl+equal { scale-window 1.25; }
+    Mod+Ctrl+0 { scale-window-reset; }
+    Mod+Alt+H { pan-view "left"; }
+    Mod+Alt+L { pan-view "right"; }
+    Mod+Alt+K { pan-view "up"; }
+    Mod+Alt+J { pan-view "down"; }
+
+    // viewport bookmarks: save the view (position and zoom) of the tag in use, jump back to it
+    Mod+Alt+1 { bookmark-goto 1; }
+    Mod+Alt+Shift+1 { bookmark-save 1; }
+    Mod+Alt+2 { bookmark-goto 2; }
+    Mod+Alt+Shift+2 { bookmark-save 2; }
+    Mod+Alt+3 { bookmark-goto 3; }
+    Mod+Alt+Shift+3 { bookmark-save 3; }
+    Mod+Alt+4 { bookmark-goto 4; }
+    Mod+Alt+Shift+4 { bookmark-save 4; }
+    Mod+Alt+5 { bookmark-goto 5; }
+    Mod+Alt+Shift+5 { bookmark-save 5; }
+    Mod+Alt+6 { bookmark-goto 6; }
+    Mod+Alt+Shift+6 { bookmark-save 6; }
+    Mod+Alt+7 { bookmark-goto 7; }
+    Mod+Alt+Shift+7 { bookmark-save 7; }
+    Mod+Alt+8 { bookmark-goto 8; }
+    Mod+Alt+Shift+8 { bookmark-save 8; }
+    Mod+Alt+9 { bookmark-goto 9; }
+    Mod+Alt+Shift+9 { bookmark-save 9; }
+
+    // tiling
+    Mod+G { tile-cycle; }
+    Mod+Alt+G { tile-once "master-stack"; }
+    Mod+Shift+G { toggle-float; }
+    Mod+Shift+bracketleft { tile-ratio -0.05; }
+    Mod+Shift+bracketright { tile-ratio 0.05; }
+    Mod+Ctrl+bracketleft { tile-masters -1; }
+    Mod+Ctrl+bracketright { tile-masters 1; }
+
+    Mod+Shift+Escape { toggle-shortcuts-inhibit; }
+
+    // tags
+    Mod+Tab { view-previous; }
+    Mod+0 { view-all; }
+    Mod+1 { view-tag 1; }
+    Mod+Ctrl+1 { toggle-view-tag 1; }
+    Mod+Shift+1 { send-to-tag 1; }
+    Mod+2 { view-tag 2; }
+    Mod+Ctrl+2 { toggle-view-tag 2; }
+    Mod+Shift+2 { send-to-tag 2; }
+    Mod+3 { view-tag 3; }
+    Mod+Ctrl+3 { toggle-view-tag 3; }
+    Mod+Shift+3 { send-to-tag 3; }
+    Mod+4 { view-tag 4; }
+    Mod+Ctrl+4 { toggle-view-tag 4; }
+    Mod+Shift+4 { send-to-tag 4; }
+    Mod+5 { view-tag 5; }
+    Mod+Ctrl+5 { toggle-view-tag 5; }
+    Mod+Shift+5 { send-to-tag 5; }
+    Mod+6 { view-tag 6; }
+    Mod+Ctrl+6 { toggle-view-tag 6; }
+    Mod+Shift+6 { send-to-tag 6; }
+    Mod+7 { view-tag 7; }
+    Mod+Ctrl+7 { toggle-view-tag 7; }
+    Mod+Shift+7 { send-to-tag 7; }
+    Mod+8 { view-tag 8; }
+    Mod+Ctrl+8 { toggle-view-tag 8; }
+    Mod+Shift+8 { send-to-tag 8; }
+    Mod+9 { view-tag 9; }
+    Mod+Ctrl+9 { toggle-view-tag 9; }
+    Mod+Shift+9 { send-to-tag 9; }
+
+    // mouse
+    Mod+MouseLeft { drag-move; }
+    Mod+MouseMiddle { drag-pan; }
+    Mod+MouseRight { drag-resize; }
+
+    // VT switching
+    Ctrl+Alt+XF86Switch_VT_1 { switch-vt 1; }
+    Ctrl+Alt+XF86Switch_VT_2 { switch-vt 2; }
+    Ctrl+Alt+XF86Switch_VT_3 { switch-vt 3; }
+    Ctrl+Alt+XF86Switch_VT_4 { switch-vt 4; }
+    Ctrl+Alt+XF86Switch_VT_5 { switch-vt 5; }
+    Ctrl+Alt+XF86Switch_VT_6 { switch-vt 6; }
+    Ctrl+Alt+XF86Switch_VT_7 { switch-vt 7; }
+    Ctrl+Alt+XF86Switch_VT_8 { switch-vt 8; }
+    Ctrl+Alt+XF86Switch_VT_9 { switch-vt 9; }
+    Ctrl+Alt+XF86Switch_VT_10 { switch-vt 10; }
+    Ctrl+Alt+XF86Switch_VT_11 { switch-vt 11; }
+    Ctrl+Alt+XF86Switch_VT_12 { switch-vt 12; }
+}

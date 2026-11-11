@@ -1,0 +1,17 @@
+options {
+    border-width 2
+    corner-radius 12
+    shadow-size 28
+    focus-shadow-color "#00000088"
+    focus-shadow-size 32
+    shadow-offset-y 0
+    opacity 0.92
+    inactive-opacity 0.82
+    blur-radius 10
+    tile-gap 14
+    tile-inner-gap 12
+    sloppy-focus true
+    cursor-theme "Bibata-Modern-Ice"
+    cursor-size 24
+    open-scale 0.94
+}

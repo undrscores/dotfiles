@@ -1,0 +1,10 @@
+// uwc config. Start with:  uwc-session   (starts quickshell/ushell)
+// Only the parts that differ from /usr/share/uwc/config.def.kdl are here, except `binds`,
+// which replaces the default set, so it is copied in full with ushell binds added.
+// Split by topic: edit the file that matches what you are changing.
+
+include "options.kdl"   // look: borders, opacity, blur, gaps, focus
+include "input.kdl"     // keyboard, touchpad
+include "rules.kdl"     // per-app window rules
+include "binds.kdl"     // every keybind (one block: it replaces the defaults)
+include "monitors.kdl"  // outputs
