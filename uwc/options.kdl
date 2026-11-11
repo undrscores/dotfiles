@@ -8,6 +8,8 @@ options {
     opacity 0.92
     inactive-opacity 0.82
     blur-radius 10
+    blur-saturation 1.2         // frosted look: the blurred backdrop is a little more colourful
+    blur-noise 0.03             // and has a hint of grain
     tile-gap 14
     tile-inner-gap 12
     sloppy-focus true

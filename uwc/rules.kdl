@@ -10,3 +10,19 @@ rule {
     corner-radius 0
     shadow-size 0
 }
+
+// Content windows stay opaque and undimmed: no tint on video or pages when they lose focus.
+rule {
+    match app-id="firefox"
+    match app-id="vlc"
+    match fullscreen=true
+    opacity 1
+    inactive-opacity 1
+    inactive-dim 0
+}
+// Fullscreen fills the screen: no rounded corners or shadow.
+rule {
+    match fullscreen=true
+    corner-radius 0
+    shadow-size 0
+}
