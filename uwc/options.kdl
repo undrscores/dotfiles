@@ -14,4 +14,13 @@ options {
     cursor-theme "Bibata-Modern-Ice"
     cursor-size 24
     open-scale 0.94
+
+    // Motion
+    open-ms 200                 // new windows fade in and grow from open-scale
+    close-ms 150                // closing windows fade out and shrink back towards it (a touch faster than opening)
+    move-ms 180                 // windows moved by key or IPC glide
+    tag-ms 200                  // windows fade in when you switch tags
+    view-ms 220                 // eased pan / zoom / fit moves
+    focus-ms 160                // border, glow and dim crossfade between windows instead of jumping
+    inactive-dim 0.05           // very slight darkening of unfocused windows, which the focus crossfade animates
 }
