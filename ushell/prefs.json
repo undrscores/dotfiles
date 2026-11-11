@@ -50,5 +50,9 @@
   "captureDelay": 0,
   "notificationLog": true,
   "batteryWarnPct": 15,
-  "autoPowerSaver": false
+  "autoPowerSaver": false,
+  "nightSchedule": true,
+  "nightFrom": "21:00",
+  "nightTo": "07:00",
+  "idleDimSec": 30
 }
