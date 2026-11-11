@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=ushell
+Description=Accent-coloured spinner on the ushell background
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/ushell
+ScriptFile=/usr/share/plymouth/themes/ushell/ushell.script
