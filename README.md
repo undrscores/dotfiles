@@ -14,3 +14,7 @@ Fonts: Geist from [vercel/geist-font](https://github.com/vercel/geist-font), `ot
 
 Zsh lives in `zsh/` via `ZDOTDIR`. The one file that must stay in `$HOME` is `~/.zshenv`;
 `zsh/zshenv.reference` is a copy of it. Its first line is `export ZDOTDIR="$HOME/.config/zsh"`.
+
+## ushell prefs
+
+`ushell/prefs.json` is a snapshot of `~/.local/state/ushell/prefs.json` with the home directory written as `~`. To use it, copy it there and replace `~` in the wallpaper path with your home directory.
